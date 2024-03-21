@@ -1,0 +1,58 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contractHandler Handles the unlikely event the function data cannot be decoded 1`] = `
+{
+  "errors": [
+    {
+      "_tag": "DecodeFunctionDataError",
+      "message": 
+"Data size of 10 bytes is too small for given parameters.
+
+Params: (uint256 balance)
+Data:   0x30783432343234323432 (10 bytes)
+
+Version: viem@2.7.9"
+,
+      "name": "DecodeFunctionDataError",
+    },
+  ],
+  "executionGasUsed": 0n,
+  "rawData": "0x",
+}
+`;
+
+exports[`contractHandler Handls function data not being encodable 1`] = `
+{
+  "errors": [
+    {
+      "_tag": "InvalidRequestError",
+      "message": 
+"Address "not correct type" is invalid.
+
+Version: viem@2.7.9"
+,
+      "name": "InvalidRequestError",
+    },
+  ],
+  "executionGasUsed": 0n,
+  "rawData": "0x",
+}
+`;
+
+exports[`contractHandler should handle errors returned during contract call 1`] = `
+{
+  "createdAddresses":   Set {},
+  "errors": [
+    {
+      "_tag": "revert",
+      "message": "Revert: Error {"abiItem":{"inputs":[{"name":"message","type":"string"}],"name":"Error","type":"error"},"args":["Dai/insufficient-balance"],"errorName":"Error"}",
+      "name": "revert",
+    },
+  ],
+  "executionGasUsed": 2754n,
+  "gas": 16774461n,
+  "logs": [],
+  "rawData": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000184461692f696e73756666696369656e742d62616c616e63650000000000000000",
+  "selfdestruct":   Set {},
+}
+`;
